@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/user');
 const viewPath = 'users';
 
 exports.new = (req, res) => {

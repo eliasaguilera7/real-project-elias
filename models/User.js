@@ -65,5 +65,5 @@ UserSchema.plugin(passportLocalMongoose, {
 
 
 module.exports = mongoose.model('User', UserSchema);
-
+//modules.export = mongoose.models.User || mongoose.model('User', UserSchema);
 //this is a change second
