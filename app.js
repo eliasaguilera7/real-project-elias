@@ -35,7 +35,7 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-const User = require('./models/User');
+const User = require('./models/user');
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
