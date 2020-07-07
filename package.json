@@ -26,5 +26,14 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.0.1"
   },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliasaguilera7/real-project-elias.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eliasaguilera7/real-project-elias/issues"
+  },
+  "homepage": "https://github.com/eliasaguilera7/real-project-elias#readme",
   "description": ""
 }
