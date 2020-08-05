@@ -3,8 +3,7 @@ const { new: _new, index, show, create, edit, update, delete: _delete } = requir
 // Step 1: Write an authentication function to identify if a request is authenticated
 function auth (req, res, next) {
   if (!req.isAuthenticated()) {
-    req.flash('danger', 'Warning!, You need to login.');
-    return res.redirect('/login');
+    return res.status(401).json({message: "Well, You need to authenticate first"});
   }
   next();
 }
