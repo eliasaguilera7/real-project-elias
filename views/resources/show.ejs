@@ -9,7 +9,8 @@
 <div class="container my-5">
   <header>
     <h1>
-      <%= resource.title %>
+      <h2>Thanks for contacting Us! we will get in touch with you as soon as possible</h2>
+      <%= resource.user.fullname %>
       <a href="/resources/<%= resource.id %>/edit">
         <i class="fa fa-edit"></i>
       </a>
@@ -18,14 +19,13 @@
     <small>
       <%= (resource.updatedAt.toLocaleString("en-CA")) %>
     </small>
-    <p><strong>By: <%= resource.user.fullname %></strong></p>
+    <p><strong>You will be contacted Via: <%= resource.contactType %></strong></p>
   </header>
   <hr>
   <div class="strategy">
-    <%- resource.strategy %>
+    <%- resource.phoneNumber %>
   </div>
 </div>
 
 <%- include ('../partials/footer') %>
-
 

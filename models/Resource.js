@@ -15,16 +15,16 @@
 const mongoose = require('mongoose');
 
 const ResourceSchema = new mongoose.Schema({
-    user: {
+  user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
    }, 
-   title: {
+   phoneNumber: {
     type: String,
     required: true
    },
-   strategy: {
+   contactType: {
     type: String,
     required: true
    },
