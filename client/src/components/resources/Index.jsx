@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom';
 const Index = function ({user}) {
 
   const [resources, setResources] = useState([]);
- // const [setplans, setPlans] = useState([]);
- //const [getplans, getPlans] = useState([]);
- // const [deleteplans, deletePlans] = useState([]);
+
 
   useEffect(() => {
     (async () => {

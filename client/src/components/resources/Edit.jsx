@@ -18,8 +18,8 @@ const Edit = function (props) {
 
   useEffect(() => {
     (async () => {
-      const planResp = await Axios.get(`/api/resources/${id}`);
-      if (planResp.status === 200) setInputs(planResp.data);
+      const resourceResp = await Axios.get(`/api/resources/${id}`);
+      if (resourceResp.status === 200) setInputs(resourceResp.data);
     })();
   }, []);
 
@@ -30,17 +30,17 @@ const Edit = function (props) {
       const resp = await Axios.post('/api/resources/update', inputs);
 
       if (resp.status === 200)  {
-        toast("The plan was updated successfully", {
+        toast("Your appointment updated successfully", {
           type: toast.TYPE.SUCCESS
         });
         setRedirect(true);
       } else {
-        toast("There was an issue updating the plan", {
+        toast("There was an issue updating your appointment", {
           type: toast.TYPE.ERROR
         });
       }
     } catch (error) {
-      toast("There was an issue updating the plan", {
+      toast("There was an issue updating your Appointment", {
         type: toast.TYPE.ERROR
       });
     }
@@ -62,7 +62,7 @@ const Edit = function (props) {
   return (
     <Container className="my-5">
       <header>
-        <h1>Edit Plan Post</h1>
+        <h1>Edit your Appointment</h1>
       </header>
 
       <hr/>
