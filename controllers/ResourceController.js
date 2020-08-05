@@ -10,14 +10,14 @@ exports.index = async (req, res) => {
       .populate('user')
       .sort({updatedAt: 'desc'});
 
-    res.status(200).json(resouces);
+    res.status(200).json(resources);
   } catch (error) {
     res.status(400).json({message: 'There was an error creating your reservarion', error});
   }
 };
 exports.show = async (req, res) => {
   try {
-    const resource = await Resouce.findById(req.params.id)
+    const resource = await Resource.findById(req.params.id)
       .populate('user');
     
     res.status(200).json(resource);
