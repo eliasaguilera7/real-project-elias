@@ -20,11 +20,11 @@ const ResourceSchema = new mongoose.Schema({
     ref: 'User',
     required: true
    }, 
-   phoneNumber: {
+   title: {
     type: String,
     required: true
    },
-   contactType: {
+   strategy: {
     type: String,
     required: true
    },
@@ -34,9 +34,11 @@ const ResourceSchema = new mongoose.Schema({
     enum: ['DRAFT', 'PUBLISHED'],
     default: 'DRAFT'
   }}, {
-    timestamps: true
-
-});
+    timestamps: true,
+    toJSON:{
+      getters: true
+    }
+  });
 
 ResourceSchema.query.drafts = function () {
     return this.where({
